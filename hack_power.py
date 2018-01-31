@@ -1,7 +1,7 @@
 #! python3
 
 '''
-hack_power calculator deciphers a code written using strings and assign values
+Hack_power calculator deciphers a code written using strings and assign values
 to given letters and phrases.
 Values are assigned to letters and phrases as following:
 Letters: {'a':1,'b':2, 'c':3}; Phrases: {'ba':10, 'baa':20}
@@ -26,14 +26,14 @@ def hack_calculator(hack: str):
     #Initial power state
     power=0
 
-    #Calculating power of letters - dynamiclly typed hack dictionaries
+    #Calculating the power of letters
     for letter in hackDict_letters.keys():
         pattern=re.compile(letter)
         search=pattern.findall(userInput)
         for j in range(len(search)):
             power += hackDict_letters[letter]*(j+1)
 
-    # Calculating power of phrases - dynamically typed hack dictionaries
+    # Calculating power of phrases
     for phrase in hackDict_phrases.keys():
         pattern = re.compile(phrase)
         search = pattern.findall(userInput)
@@ -49,6 +49,7 @@ def hack_calculator(hack: str):
     # Final result with a message
     print("The power of the '"+ hack+ "' hack code is: " + str(power))
 
+# Examples:
 hack_calculator('baaca')
 hack_calculator('babacaba')
 hack_calculator('aabacabaaaca')
