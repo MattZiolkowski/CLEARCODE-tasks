@@ -1,4 +1,4 @@
-Hack_Power.py
+#Hack_Power.py#
     Hack_power calculator deciphers a code written using strings and assign values
     to given letters and phrases. Values are assigned to letters and phrases as following:
     Letters: {'a':1,'b':2, 'c':3}; Phrases: {'ba':10, 'baa':20}
@@ -6,14 +6,14 @@ Hack_Power.py
     Example: Code 'abca' has power(i.e. equals to)=(1*1)+(2*1)+(1*3)+(2*1)=8.
     Example(with phrases): Code 'abaa' has power=(1*1)+(1*2)+(1*2)+(2*1)+(3*1)+(20)=28.
 
-Getting Started
+#Getting Started#
     Download a file from my GitHub account. Make sure you have Python3 installed. If you use Windows you are able to
     run the program in command prompt.
 
-Prerequisites
+#Prerequisites#
     You will need a Python 3.x installed on your computer and Windows to run program through command prompt.
 
-Installing
+#Installing#
     Save the files on your PC. Make sure you have Python 3.x.x installed. For guidence on installation of Python
     visit www.python.org.
 
