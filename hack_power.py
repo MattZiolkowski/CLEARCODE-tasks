@@ -51,7 +51,7 @@ def hack_calculator(hack: str):
     # Final result with a message
     print("The power of the '" + hack + "' hack code is: " + str(power))
 
-# Example:
+# Examples:
 hack_calculator('baaca')
 hack_calculator('babacaba')
 hack_calculator('aabacabaaaca')
