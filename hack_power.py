@@ -3,11 +3,13 @@
 '''
 Hack_power calculator deciphers a code written using strings and assign values
 to given letters and phrases.
-Values are assigned to letters and phrases as following:
+Power value is assigned to code letters and phrases as following:
 Letters: {'a':1,'b':2, 'c':3}; Phrases: {'ba':10, 'baa':20}
 Additionally, each letter in the code is multiplied by number of occurrences of that letter.
 Example: Code 'abca' has power(i.e. equals to)=(1*1)+(2*1)+(1*3)+(2*1)=8
 Example(with phrases): Code 'abaa' has power=(1*1)+(1*2)+(1*2)+(2*1)+(3*1)+(20)=28
+
+Code letters and phrases can be dynamically typed (i.e. changed, added or removed in dictionaries)
 '''
 
 import re
