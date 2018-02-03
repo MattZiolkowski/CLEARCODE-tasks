@@ -32,7 +32,8 @@ file in the current working directory.
 # Built With
 
 Python 3.6.1
--using 're' and 'csv' frameworks 
+-using 're' framework (Regular Expressions)
+
 -PyCharm
 
 # Authors
