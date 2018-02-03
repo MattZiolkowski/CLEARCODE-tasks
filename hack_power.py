@@ -12,26 +12,26 @@ Example(with phrases): Code 'abaa' has power=(1*1)+(1*2)+(1*2)+(2*1)+(3*1)+(20)=
 
 import re
 
-#Dictionaries for accessing hack code values for letters and phrases
-#Dynamic version - keys and values can be changed or added
-hackDict_letters={'a':1,'b':2,'c':3}
-hackDict_phrases={'ba':10, 'baa':10}
+# Creating dictionaries for accessing hack code values for code letters and phrases
+# Dynamic version - keys and values can be changed or added
+hackDict_letters = {'a': 1, 'b': 2, 'c': 3}
+hackDict_phrases = {'ba': 10, 'baa': 10}
 
-#Function
+
+# Creting function
 def hack_calculator(hack: str):
-
-    #Assign input from console into variable userInput. Change to lower case
+    # Assign input from console into variable userInput. Change to lower case
     userInput = hack.lower()
 
-    #Initial power state
-    power=0
+    # Initial power state
+    power = 0
 
-    #Calculating the power of letters
+    # Calculating power of letters
     for letter in hackDict_letters.keys():
-        pattern=re.compile(letter)
-        search=pattern.findall(userInput)
+        pattern = re.compile(letter)
+        search = pattern.findall(userInput)
         for j in range(len(search)):
-            power += hackDict_letters[letter]*(j+1)
+            power += hackDict_letters[letter] * (j + 1)
 
     # Calculating power of phrases
     for phrase in hackDict_phrases.keys():
@@ -44,22 +44,14 @@ def hack_calculator(hack: str):
     for letter in userInput:
         if letter not in hackDict_letters.keys():
             print("Code letter: " + letter + " not found.")
-            power*=0
+            power *= 0
 
     # Final result with a message
-    print("The power of the '"+ hack+ "' hack code is: " + str(power))
+    print("The power of the '" + hack + "' hack code is: " + str(power))
 
-# Examples:
+# Example:
 hack_calculator('baaca')
 hack_calculator('babacaba')
 hack_calculator('aabacabaaaca')
 hack_calculator('abc')
 hack_calculator('bad')
-
-
-
-
-
-
-
-
